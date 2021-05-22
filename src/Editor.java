@@ -1,6 +1,5 @@
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,9 +23,9 @@ public class Editor extends JFrame{
 
         add(ToolBar.Toolbar(), BorderLayout.WEST);
 
-
         setVisible(true);
     }
+
 
 
 
@@ -75,23 +74,23 @@ public class Editor extends JFrame{
             putValue(NAME, "Open");
         }
         public void actionPerformed(ActionEvent e) {
-                Menu Input = new Menu();
-                Input.button.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        String PATH = Input.TextField.getText();
-                        // Make frame disappear
-                        Input.setVisible(false);
-                        Input.dispose();
-                        File OpenedImage = new File (Paths.get(CurrentPath.toString(), "images", PATH).toString());
-                        if (Input.Validate(PATH) && OpenedImage.exists()) {
-                                Background(OpenedImage);
-                        } else {
-                            Input.new ErrorWindow();
+            InputWindow Input = new InputWindow();
+            Input.button.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    String PATH = Input.TextField.getText();
+                    // Make frame disappear
+                    Input.setVisible(false);
+                    Input.dispose();
+                    File OpenedImage = new File (Paths.get(CurrentPath.toString(), "images", PATH).toString());
+                    if (Input.Validate(PATH) && OpenedImage.exists()) {
+                        Background(OpenedImage);
+                    } else {
+                        Input.new ErrorWindow();
 
-                        }
                     }
-                });
+                }
+            });
         }
 
     }
@@ -143,7 +142,6 @@ public class Editor extends JFrame{
         setContentPane(panel);
         setVisible(true);
     }
-
     //-----------------------------------------------------------------------------
     // Make Empty Background
     public void NewBackground() {
@@ -154,4 +152,6 @@ public class Editor extends JFrame{
 
         setVisible(true);
     }
+
+
 }

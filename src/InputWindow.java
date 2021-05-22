@@ -4,10 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Menu extends JFrame{
+public class InputWindow extends JFrame{
 
 //  Constructor
-    public Menu(){
+    public InputWindow(){
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 150);
