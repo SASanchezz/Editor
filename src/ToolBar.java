@@ -12,8 +12,10 @@ public class ToolBar {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Editor.regime = "pen";
+
             }
         });
+        toolBar.add(penButton);
 
         JButton lineButton = new JButton(new  ImageIcon("images/line.png"));
         lineButton.addActionListener(new ActionListener() {
@@ -22,36 +24,45 @@ public class ToolBar {
                 Editor.regime = "line";
             }
         });
+        toolBar.add(lineButton);
 
         JButton squareButton = new JButton(new  ImageIcon("images/square.png"));
-        lineButton.addActionListener(new ActionListener() {
+        squareButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Editor.regime = "square";
             }
         });
+        toolBar.add(squareButton);
 
-        JButton triangleButton = new JButton(new  ImageIcon("images/triangle.jpg"));
-        lineButton.addActionListener(new ActionListener() {
+        JButton ovalButton = new JButton(new  ImageIcon("images/oval.png"));
+        ovalButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Editor.regime = "triangle";
+                Editor.regime = "oval";
             }
         });
+        toolBar.add(ovalButton);
 
         JButton rubberButton = new JButton(new  ImageIcon("images/rubber.png"));
-        lineButton.addActionListener(new ActionListener() {
+        rubberButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Editor.regime = "rubber";
             }
         });
-
         toolBar.add(rubberButton);
-        toolBar.add(penButton);
-        toolBar.add(lineButton);
-        toolBar.add(squareButton);
-        toolBar.add(triangleButton);
+
+        JButton textButton = new JButton(new  ImageIcon("images/text.png"));
+        textButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Editor.regime = "text";
+            }
+        });
+        toolBar.add(textButton);
+
+        toolBar.setBounds(0, 0, 30, 500);
 
 
 
