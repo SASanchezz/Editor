@@ -1,10 +1,12 @@
+package Bars;
+import Main.Editor;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ToolBar {
 
-    protected static JToolBar Toolbar() {
+    public static JToolBar Toolbar() {
         JToolBar toolBar = new JToolBar("Toolbar", JToolBar.VERTICAL);
 
         JButton penButton = new JButton(new  ImageIcon("images/pen.png"));
@@ -44,6 +46,15 @@ public class ToolBar {
         });
         toolBar.add(ovalButton);
 
+        JButton triangleButton = new JButton(new  ImageIcon("images/triangle.png"));
+        triangleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Editor.regime = "triangle";
+            }
+        });
+        toolBar.add(triangleButton);
+
         JButton rubberButton = new JButton(new  ImageIcon("images/rubber.png"));
         rubberButton.addActionListener(new ActionListener() {
             @Override
@@ -52,6 +63,15 @@ public class ToolBar {
             }
         });
         toolBar.add(rubberButton);
+
+        JButton cutButton = new JButton(new  ImageIcon("images/cut.png"));
+        cutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Editor.regime = "cut";
+            }
+        });
+        toolBar.add(cutButton);
 
         JButton textButton = new JButton(new  ImageIcon("images/text.png"));
         textButton.addActionListener(new ActionListener() {
@@ -62,7 +82,9 @@ public class ToolBar {
         });
         toolBar.add(textButton);
 
-        toolBar.setBounds(0, 0, 30, 500);
+
+
+        toolBar.setBounds(0, 0, 44, 264);
 
 
 
