@@ -168,6 +168,16 @@ public class Editor extends JFrame{
                         case "square":
                             g.drawRect(x1, y1, (x2-x1), (y2-y1));
                             break;
+                        // filled oval
+                        case "filledCircle":
+                            g.drawOval(x1, y1, (x2-x1), (y2-y1));
+                            g.fillOval(x1, y1, (x2-x1), (y2-y1));
+                            break;
+                        // filled rectangle
+                        case "filledSquare":
+                            g.drawRect(x1, y1, (x2-x1), (y2-y1));
+                            g.fillRect(x1, y1, (x2-x1), (y2-y1));
+                            break;
                         case "triangle":
                             g.drawLine(X_START, Y_START, e.getX(), Y_START);
                             g.drawLine(X_START, Y_START, e.getX()-((e.getX()-X_START)/2), e.getY());

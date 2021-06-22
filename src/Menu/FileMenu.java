@@ -41,7 +41,7 @@ public class FileMenu {
 
             try
             {
-                JFileChooser jf= new  JFileChooser("C:\\Program Files\\Workspace\\Java_workspace\\Practice_projects\\Editor\\images");
+                JFileChooser jf= new  JFileChooser("C:\\Users\\Sanchez\\Desktop\\Java_workspace\\Uni_Practice\\Editor\\images");
                 if(FIleManager.path==null)
                 {
                     int  result = jf.showSaveDialog(null);
@@ -71,7 +71,7 @@ public class FileMenu {
             String fileFullName = null;
             try
             {
-                JFileChooser jf= new  JFileChooser("C:\\Program Files\\Workspace\\Java_workspace\\Practice_projects\\Editor\\images");
+                JFileChooser jf= new  JFileChooser("C:\\Users\\Sanchez\\Desktop\\Java_workspace\\Uni_Practice\\Editor\\images");
                 int  result = jf.showSaveDialog(null);
                 if(result==JFileChooser.APPROVE_OPTION)
                 {
@@ -97,7 +97,7 @@ public class FileMenu {
             putValue(NAME, "Open");
         }
         public void actionPerformed(ActionEvent e) {
-            JFileChooser jf= new  JFileChooser("C:\\Program Files\\Workspace\\Java_workspace\\Practice_projects\\Editor\\images");
+            JFileChooser jf= new  JFileChooser("C:\\Users\\Sanchez\\Desktop\\Java_workspace\\Uni_Practice\\Editor\\images");
             int  result = jf.showOpenDialog(null);
             if(result==JFileChooser.APPROVE_OPTION)
             {

@@ -46,6 +46,24 @@ public class ToolBar {
         });
         toolBar.add(ovalButton);
 
+        JButton filledSquareButton = new JButton(new  ImageIcon("images/filledSquare.png"));
+        filledSquareButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Editor.regime = "filledSquare";
+            }
+        });
+        toolBar.add(filledSquareButton);
+
+        JButton filledCircleButton = new JButton(new  ImageIcon("images/filledCircle.png"));
+        filledCircleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Editor.regime = "filledCircle";
+            }
+        });
+        toolBar.add(filledCircleButton);
+
         JButton triangleButton = new JButton(new  ImageIcon("images/triangle.png"));
         triangleButton.addActionListener(new ActionListener() {
             @Override
